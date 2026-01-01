@@ -1,7 +1,7 @@
 ---
 layout: post 
 title:  "Visualizing the Loss Landscape of LLMs"
-date:   2025-12-30 21:36:48 +0100
+date:   2025-12-31 21:36:48 +0100
 categories: jekyll update
 ---
 

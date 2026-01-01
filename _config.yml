@@ -21,11 +21,10 @@
 title: Nico Sharei
 email: nico.sharei@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Thank you for checking out my site :)
+  Personal website of Nico Sharei
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://nico-sharei.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  nico-sharei
-
 
 
 
@@ -33,6 +32,11 @@ github_username:  nico-sharei
 theme: minima
 plugins:
   - jekyll-feed
+
+collections:
+  publications:
+    output: true
+    permalink: /publications/:name/
 
 # Exclude from processing.
 # The following items will not be processed, by default.

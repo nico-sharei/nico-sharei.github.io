@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+<div class="post">
+  <h1 class="page-heading">Publications</h1>
+
+  {% if site.publications.size > 0 %}
+    {% assign pubs = site.publications | sort: "date" | reverse %}
+
+    {% assign current_year = "" %}
+    <ul class="post-list">
+      {% for pub in pubs %}
+        {% assign pub_year = pub.date | date: "%Y" %}
+
+        {% if pub_year != current_year %}
+          {% if current_year != "" %}
+            </ul>
+          {% endif %}
+
+          <h2>{{ pub_year }}</h2>
+          <ul class="post-list">
+          {% assign current_year = pub_year %}
+        {% endif %}
+
+        <li>
+          {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+          <span class="post-meta">
+            {{ pub.date | date: date_format }}
+            {% if pub.authors %}• {{ pub.authors }}{% endif %}
+            {% if pub.venue %}• {{ pub.venue }}{% endif %}
+          </span>
+
+          <h3>
+            <a class="post-link" href="{{ pub.url | relative_url }}">
+              {{ pub.title | escape }}
+            </a>
+          </h3>
+
+          {% if site.show_excerpts %}
+            {{ pub.excerpt }}
+          {% endif %}
+
+          {% if pub.pdf %}
+            <p><a href="{{ pub.pdf }}" target="_blank">PDF</a></p>
+          {% endif %}
+
+          {% if pub.doi %}
+            <p><a href="{{ pub.doi }}" target="_blank">DOI</a></p>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No publications yet.</p>
+  {% endif %}
+</div>

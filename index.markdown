@@ -7,6 +7,13 @@ title: Home
 
 ---
 
-Hi! Welcome to my personal page. I am a Machine Learning Engineer based in Germany 🇩🇪 and love to do Research in this field. 
-This site primarly serves for me to do document these little experiments and share my general thoughts. 
-Feel free to take part :)
+Hi! Welcome to my personal page 👋
+
+I’m a Master’s graduate in Data Science based in Germany 🇩🇪 with a strong interest in Machine Learning and research.
+
+My long-term goal is to become a researcher in machine learning and actively contribute to advancing the field.
+To grow in this area, I frequently work on small projects and experiments. This website essentially serves as a space to document them, along with my thoughts, ideas, and reflections as I learn.
+
+
+Feel free to explore. maybe you’ll find something interesting 😌
+
