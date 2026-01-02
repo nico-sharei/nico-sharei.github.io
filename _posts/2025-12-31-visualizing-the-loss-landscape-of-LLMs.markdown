@@ -7,7 +7,8 @@ categories: jekyll update
 
 ## Background
 
-Some time ago, I came across the paper [*Visualizing the Loss Landscape of Neural Nets*][visualizing-paper] by Li et al. (2018), and it truly blew my mind. The authors introduce a method to effectively visualize the loss landscape of deep learning models, which is a significant breakthrough. While the ultimate goal of supervised learning is to find parameter values that minimize the loss function—ideally reaching a global minimum or a good local minimum—visualizing the loss surface provides insight into the shape of the landscape and the dynamics of optimization. By inspecting these visualizations, one can see how hyperparameters such as network depth, number of filters, or architectural choices affect the curvature, smoothness, and connectivity of the loss landscape. This understanding enables informed adjustments that can make training more stable and help the model converge more efficiently.
+Some time ago, I came across the paper [*Visualizing the Loss Landscape of Neural Nets*][visualizing-paper] by Li et al. (2018), and it truly blew my mind.
+In this work, the authors introduce a method for visualizing the loss landscape of deep neural networks, which is a significant breakthrough because the central goal of supervised learning is essentially to locate a good local minimum or, ideally, the global minimum of this landscape. These visualizations reveal how hyperparameters such as network depth, number of filters, and architectural choices influence the curvature, smoothness, and connectivity of the loss surface. With this insight, practitioners can make informed adjustments that stabilize training and enable models to converge more efficiently.
 
 Li et al. demonstrate the power of their approach by comparing the loss surfaces of ResNet-56 with and without skip connections, showing that skip connections significantly smooth the loss surface and alter the optimization dynamics.
 
