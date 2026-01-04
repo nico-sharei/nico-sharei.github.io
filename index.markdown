@@ -17,3 +17,6 @@ To grow in this area, I frequently work on small projects and experiments. This 
 
 Feel free to explore. maybe you’ll find something interesting 😌
 
+<img src="/assets/home/profile.jpeg"
+     alt="Loss landscape"
+     style="width:40%; height:auto;">
