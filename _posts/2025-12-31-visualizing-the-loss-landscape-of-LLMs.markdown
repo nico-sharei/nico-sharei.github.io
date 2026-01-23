@@ -7,20 +7,22 @@ categories: jekyll update
 
 ## Background
 
-Some time ago, I came across the paper [*Visualizing the Loss Landscape of Neural Nets*][visualizing-paper] by Li et al. (2018), and it truly blew my mind.
-In this work, the authors introduce a method for visualizing the loss landscape of deep neural networks, which is a significant breakthrough because the central goal of supervised learning is essentially to locate a good local minimum or, ideally, the global minimum of this landscape. These visualizations reveal how hyperparameters such as network depth, number of filters, and architectural choices influence the curvature, smoothness, and connectivity of the loss surface. With this insight, practitioners can make informed adjustments that stabilize training and enable models to converge more efficiently.
+Some time ago, I came across the paper[*Visualizing the Loss Landscape of Neural Nets*][visualizing-paper] by Li et al. (2018) and found it quite interesting.
 
-Li et al. demonstrate the power of their approach by comparing the loss surfaces of ResNet-56 with and without skip connections, showing that skip connections significantly smooth the loss surface and alter the optimization dynamics.
+They propose a method to visualize the loss landscape of deep neural networks, which is highly relevant since supervised learning aims to find good local or global minima. These visualizations show how architectural choices affect the curvature and smoothness of the loss surface, helping practitioners stabilize training and improve convergence.
 
-![Loss landscape](/assets/loss_landscape/loss-landscape-paper.png)
+The original work focused on computer vision models, but I wondered how this would look for LLMs, given their autoregressive training differs from CV tasks. The result turned out to be quite insightful. The interactive plot below shows the loss landscape of one small layer in LLaMA-3.2 (the first linear layer inside its MLP). Feel free to explore it!
 
----
+<iframe
+  src="/assets/loss_landscape/loss_landscape_optimal_viridis.html"
+  width="100%"
+  height="500"
+  style="border:none;">
+</iframe>
 
-## Project Formulation
 
-As one might expect, I found this approach fascinating, but I didn’t want to simply replicate their work on vision models. Instead, my idea is to extend the methodology to NLP, and in particular to large language models (LLMs). This is especially interesting because Li et al. visualized loss landscapes for models trained on classification tasks, whereas autoregressive LLMs are trained with a fundamentally different objective. The loss calculation in LLMs differs due to their sequential, token-by-token training, which introduces unique challenges and opportunities for visualization. Exploring these differences requires some creative adaptations, and as we all know, real growth often comes from stepping off the conventional path. After all, growth is exactly the purpose of this website 🤝
+In the following, I will talk about the methodology of the approach and provide a few insights 
 
----
 
 ## Methodology of the Paper
 
@@ -68,9 +70,6 @@ An analogous normalization is applied to the second direction vector $$\eta$$.
 After this normalization, each filter of the direction vectors has the same norm as the corresponding filter in the trained model. Consequently, perturbations along different layers and filters are applied at comparable relative scales, preventing any single layer from disproportionately influencing the loss variation due to parameter magnitude alone.
 
 This normalization step is essential for producing interpretable loss landscape visualizations, as it ensures that the observed curvature and flatness reflect intrinsic geometric properties of the loss surface rather than artifacts arising from scale invariances in the network parameterization.
-
-
-
 
 
 [visualizing-paper]: https://arxiv.org/abs/1712.09913
