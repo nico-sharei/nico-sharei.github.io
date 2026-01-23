@@ -7,7 +7,7 @@ categories: jekyll update
 
 ## Background
 
-Some time ago, I came across the paper[*Visualizing the Loss Landscape of Neural Nets*][visualizing-paper] by Li et al. (2018) and found it quite interesting.
+Some time ago, I came across the paper [*Visualizing the Loss Landscape of Neural Nets*][visualizing-paper] by Li et al. (2018) and found it quite interesting.
 
 They propose a method to visualize the loss landscape of deep neural networks, which is highly relevant since supervised learning aims to find good local or global minima. These visualizations show how architectural choices affect the curvature and smoothness of the loss surface, helping practitioners stabilize training and improve convergence.
 
@@ -16,7 +16,7 @@ The original work focused on computer vision models, but I wondered how this wou
 <iframe
   src="/assets/loss_landscape/loss_landscape_optimal_viridis.html"
   width="100%"
-  height="500"
+  height="600"
   style="border:none;">
 </iframe>
 
