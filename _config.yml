@@ -32,6 +32,7 @@ github_username:  nico-sharei
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 collections:
   publications:
